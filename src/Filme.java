@@ -11,10 +11,6 @@ public class Filme {
 
     private ArrayList<Ator> atores = new ArrayList<Ator>();
 
-    public Diretor getDiretor() {
-        return diretor;
-    }
-
     public Filme(String nome, String descricao, Date diaDeLancamento, double orcamento, Diretor diretor, ArrayList<Ator> atores) {
         this.nome = nome;
         this.descricao = descricao;
@@ -25,6 +21,10 @@ public class Filme {
         for (Ator ator : atores) {
             this.atores.add(ator);
         }
+    }
+
+    public String getNome() {
+        return this.nome;
     }
 
     @Override
