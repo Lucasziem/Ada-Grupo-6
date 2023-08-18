@@ -22,6 +22,9 @@ public class Filme {
         return this.nome;
     }
 
+    public void addAtor(Ator ator) {
+        this.atores.add(ator);
+    }
     public void setDiretor(Diretor diretorEncontrado) {
     }
 

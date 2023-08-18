@@ -100,6 +100,20 @@ public class Main {
                     imdb.adicionarDiretorEmFilme(nomeFilmeAtualizar, nomeDiretorAdd);
                     System.out.println("Filme atualizado!");
                     break;
+
+                case 7:
+                    System.out.println("\n--- Adicionar Ator em um Filme ---");
+
+                    System.out.println("Primeiro digite o nome do filme que deseja atualizar: ");
+                    String nomeFilmeAtualizarAtor = sc.nextLine();
+
+                    System.out.println("Primeiro digite o nome do ator que deseja adicionar: ");
+                    String nomeAtorAdd = sc.nextLine();
+
+                    imdb.adicionarAtorEmFilme(nomeFilmeAtualizarAtor, nomeAtorAdd);
+                    System.out.println("Filme atualizado");
+                    break;
+
                 case 8:
                     System.out.println("\n--- Lista de Filmes ---");
 

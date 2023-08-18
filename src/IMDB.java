@@ -38,6 +38,15 @@ public class IMDB {
         }
     }
 
+    public Ator buscarAtorPorNome (String nome) {
+        for (Ator ator : atores) {
+            if (ator.getNome().equalsIgnoreCase(nome)) {
+                return ator;
+            }
+        }
+        return null;
+    }
+
     public Diretor buscarDiretorPorNome (String nome) {
         for (Diretor diretor : diretores) {
             if(diretor.getNome().equalsIgnoreCase(nome)) {
@@ -54,6 +63,19 @@ public class IMDB {
             }
         }
         return null;
+    }
+
+    public void adicionarAtorEmFilme (String nomeFilme, String nomeAtor) {
+        Filme filmeEncontrado = buscarFilmePorNome(nomeFilme);
+        Ator atorEncontrado = buscarAtorPorNome(nomeAtor);
+
+        if (filmeEncontrado == null) {
+            System.out.println("filme não existe. Tente novamente!");
+        } else if(atorEncontrado == null) {
+            System.out.println("Ator não cadastrado. Cadastre o ator antes de atualizar o filme!");
+        } else {
+            filmeEncontrado.addAtor(atorEncontrado);
+        }
     }
 
     public void adicionarDiretorEmFilme (String nomeFilme, String nomeDiretor) {
