@@ -22,4 +22,8 @@ public class Diretor extends Pessoa {
         this.filmes.add(filme);
     }
 
+    @Override
+    public String toString() {
+        return nome + ", " + idade + " anos.";
+    }
 }

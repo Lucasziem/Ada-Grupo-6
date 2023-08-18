@@ -11,31 +11,29 @@ public class Filme {
 
     private ArrayList<Ator> atores = new ArrayList<Ator>();
 
-    public Filme(String nome, String descricao, Date diaDeLancamento, double orcamento, Diretor diretor, ArrayList<Ator> atores) {
+    public Filme(String nome, String descricao, Date diaDeLancamento, double orcamento) {
         this.nome = nome;
         this.descricao = descricao;
         this.diaDeLancamento = diaDeLancamento;
         this.orcamento = orcamento;
-        this.diretor = diretor;
-
-        for (Ator ator : atores) {
-            this.atores.add(ator);
-        }
     }
 
     public String getNome() {
         return this.nome;
     }
 
+    public void setDiretor(Diretor diretorEncontrado) {
+    }
+
     @Override
     public String toString() {
-        return "Filme{" +
-                "nome='" + nome + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", diaDeLancamento=" + diaDeLancamento +
-                ", orcamento=" + orcamento +
-                ", diretor=" + diretor +
-                ", atores=" + atores +
-                '}';
+        return  nome +
+                "\nDescricao: " + descricao +
+                "\nLançado em: " + diaDeLancamento +
+                "\nOrçamento: " + orcamento +
+                "\nDiretor: " + diretor +
+                "\nAtores: " + atores;
     }
+
+
 }
