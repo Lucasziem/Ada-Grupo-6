@@ -18,7 +18,7 @@ public class Diretor extends Pessoa {
         return idade;
     }
 
-    public void setFilmes(Filme filme) {
+    public void setFilme(Filme filme) {
         this.filmes.add(filme);
     }
 

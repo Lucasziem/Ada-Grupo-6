@@ -10,5 +10,4 @@ public abstract class Pessoa {
     abstract public String getNome();
 
     abstract public int getIdade();
-    ;
 }
