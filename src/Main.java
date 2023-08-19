@@ -6,25 +6,35 @@ import java.util.Scanner;
 
 public class Main {
     public static void cadastrarAtor(Scanner sc, IMDB imdb) {
-        System.out.println("\n--- Cadastro de Ator ---");
-        System.out.println("Digite o nome do ator: ");
-        String nomeAtor = sc.nextLine();
-        System.out.println("Digite a idade do ator: ");
-        int idadeAtor = sc.nextInt();
-        Ator ator = new Ator(nomeAtor, idadeAtor);
-        imdb.adicionarAtor(ator);
-        System.out.println("Ator cadastrado!");
+        try {
+            System.out.println("\n--- Cadastro de Ator ---");
+            System.out.println("Digite o nome do ator: ");
+            String nomeAtor = sc.nextLine();
+            System.out.println("Digite a idade do ator: ");
+            int idadeAtor = sc.nextInt();
+            Ator ator = new Ator(nomeAtor, idadeAtor);
+            imdb.adicionarAtor(ator);
+            System.out.println("Ator cadastrado!");
+        } catch (InputMismatchException e) {
+            System.out.println("Precisa ser um número!");
+            cadastrarAtor(sc, imdb);
+        }
     }
 
     public static void cadastrarDiretor(Scanner sc, IMDB imdb) {
-        System.out.println("\n--- Cadastro de Diretor ---");
-        System.out.println("Digite o nome do diretor: ");
-        String nomeDiretor = sc.nextLine();
-        System.out.println("Digite a idade do diretor: ");
-        int idadeDiretor = sc.nextInt();
-        Diretor diretor = new Diretor(nomeDiretor, idadeDiretor);
-        imdb.adicionarDiretor(diretor);
-        System.out.println("Diretor cadastrado!");
+        try {
+            System.out.println("\n--- Cadastro de Diretor ---");
+            System.out.println("Digite o nome do diretor: ");
+            String nomeDiretor = sc.nextLine();
+            System.out.println("Digite a idade do diretor: ");
+            int idadeDiretor = sc.nextInt();
+            Diretor diretor = new Diretor(nomeDiretor, idadeDiretor);
+            imdb.adicionarDiretor(diretor);
+            System.out.println("Diretor cadastrado!");
+        } catch (InputMismatchException e) {
+            System.out.println("Precisa ser um número!");
+            cadastrarDiretor(sc, imdb);
+        }
     }
 
     public static void main(String[] args) throws ParseException {
