@@ -1,21 +1,25 @@
 import java.util.ArrayList;
 
-public class Diretor extends Pessoa {
+public class Diretor implements Pessoa {
+
+    private String nome;
+    private int idade;
 
     private ArrayList<Filme> filmes = new ArrayList<Filme>();
 
     public Diretor(String nome, int idade) {
-        super(nome, idade);
+        this.nome = nome;
+        this.idade = idade;
     }
 
     @Override
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     @Override
     public int getIdade() {
-        return idade;
+        return this.idade;
     }
 
     public void setFilme(Filme filme) {
