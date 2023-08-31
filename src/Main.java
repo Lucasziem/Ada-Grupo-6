@@ -171,5 +171,7 @@ public class Main {
         while(controle) {
             controle = fluxoDoSistema(sc, imdb);
         }
+
+        sc.close();
     }
 }
